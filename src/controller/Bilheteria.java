@@ -38,13 +38,13 @@ public class Bilheteria extends Thread{
 			private boolean login() {
 				
 				boolean seguir = true;
-				int tempo = 50 + (int) (Math.random() * 1000);
+				int tempo = (int) ((Math.random() * 1951) + 50);
 				try {
 					sleep(tempo);
 				} catch (InterruptedException e1) {
 					e1.printStackTrace();
 				}
-				if(tempo > 1000){
+				if(tempo >= 1000){
 	          
 				 seguir = false;
 				 System.out.println("Tempo de Espera Login atingido.");
@@ -58,13 +58,13 @@ public class Bilheteria extends Thread{
 			private boolean processoCompra() {
 				
 				boolean seguir = true;
-				int tempo = 1000 + (int) (Math.random() * 2000);
+				int tempo = (int) ((Math.random() * 2001) + 1000);
 				try {
 					sleep(tempo);
 				} catch (InterruptedException e1) {
 					e1.printStackTrace();
 				}
-				if(tempo > 2500){
+				if(tempo >= 2500){
 				 seguir = false;
 				 System.out.println("Tempo de Espera Processamento de Compra Atingido.");
 				}
